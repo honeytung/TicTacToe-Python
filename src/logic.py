@@ -4,9 +4,9 @@
 
 def make_empty_board():
     return [
-        [None, None, None],
-        [None, None, None],
-        [None, None, None]
+        ['1', '2', '3'],
+        ['4', '5', '6'],
+        ['7', '8', '9']
     ]
 
 

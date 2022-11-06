@@ -5,9 +5,9 @@ import logic
 class TestLogic(unittest.TestCase):
 
     def test_make_empty_board(self):
-        board = [[None, None, None],
-                 [None, None, None],
-                 [None, None, None]]
+        board = [['1', '2', '3'],
+                 ['4', '5', '6'],
+                 ['7', '8', '9']]
         self.assertEqual(logic.make_empty_board(), board)
 
     def test_get_winner(self):
