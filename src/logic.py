@@ -44,3 +44,23 @@ def other_player(player):
         return 'X'
 
     return 'O'
+
+
+def get_board_from_index(board, index):
+    """Given the board and the index, returns the character on that board."""
+
+    row = int((index - 1) / 3)
+    col = int((index - 1) % 3)
+
+    return board[row][col]
+
+
+def check_index(board, index):
+    """Given the board and the index, check if the index from the player is valid or not."""
+
+    if index < 1 or index > 9:
+        return False
+    if get_board_from_index(board, index) == 'X' or get_board_from_index(board, index) == 'O':
+        return False
+
+    return True
