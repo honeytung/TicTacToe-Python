@@ -12,29 +12,29 @@ class TestLogic(unittest.TestCase):
 
     def test_get_winner(self):
         board1 = [
-            ['X', None, 'O'],
-            [None, 'X', None],
-            [None, 'O', 'X']
+            ['X', '2', 'O'],
+            ['4', 'X', '6'],
+            ['7', 'O', 'X']
         ]
         board2 = [
-            ['X', None, 'O'],
-            [None, 'O', None],
+            ['X', '2', 'O'],
+            ['4', 'O', '6'],
             ['O', 'O', 'X']
         ]
         board3 = [
             ['X', 'X', 'X'],
-            [None, 'X', None],
-            [None, 'O', 'O']
+            ['4', 'X', '6'],
+            ['7', 'O', 'O']
         ]
         board4 = [
-            ['X', None, 'O'],
-            [None, 'O', 'O'],
-            [None, 'O', 'O']
+            ['X', '2', 'O'],
+            ['4', 'O', 'O'],
+            ['7', 'O', 'O']
         ]
         board5 = [
-            ['X', None, 'O'],
-            [None, 'O', 'X'],
-            [None, 'O', 'O']
+            ['X', '2', 'O'],
+            ['4', 'O', 'X'],
+            ['7', 'O', 'O']
         ]
         self.assertEqual(logic.get_winner(board1), 'X')
         self.assertEqual(logic.get_winner(board2), 'O')
@@ -48,19 +48,19 @@ class TestLogic(unittest.TestCase):
 
     def test_get_board_from_index(self):
         board = [
-            ['X', None, 'O'],
-            [None, 'X', None],
-            [None, 'O', 'X']
+            ['X', '2', 'O'],
+            ['4', 'X', '6'],
+            ['7', 'O', 'X']
         ]
         self.assertEqual(logic.get_board_from_index(board, 1), 'X')
-        self.assertEqual(logic.get_board_from_index(board, 6), None)
+        self.assertEqual(logic.get_board_from_index(board, 6), '6')
         self.assertEqual(logic.get_board_from_index(board, 8), 'O')
 
     def test_check_index(self):
         board = [
-            ['X', None, 'O'],
-            [None, 'X', None],
-            [None, 'O', 'X']
+            ['X', '2', 'O'],
+            ['4', 'X', '6'],
+            ['7', 'O', 'X']
         ]
         self.assertEqual(logic.check_index(board, 1), False)
         self.assertEqual(logic.check_index(board, 6), True)
