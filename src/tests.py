@@ -31,11 +31,16 @@ class TestLogic(unittest.TestCase):
             ['X', '2', 'O'],
             ['4', 'O', 'X'],
             ['7', 'O', 'O']]
+        board6 = [
+            ['O', 'X', 'O'],
+            ['O', 'X', 'X'],
+            ['X', 'O', 'O']]
         self.assertEqual(logic.get_winner(board1), 'X')
         self.assertEqual(logic.get_winner(board2), 'O')
         self.assertEqual(logic.get_winner(board3), 'X')
         self.assertEqual(logic.get_winner(board4), 'O')
         self.assertEqual(logic.get_winner(board5), None)
+        self.assertEqual(logic.get_winner(board6), None)
 
     def test_other_player(self):
         self.assertEqual(logic.other_player('X'), 'O')
@@ -59,7 +64,6 @@ class TestLogic(unittest.TestCase):
         self.assertEqual(logic.check_index(board, 6), True)
         self.assertEqual(logic.check_index(board, 8), False)
 
-
     def test_update_board(self):
         board1 = [
             ['X', '2', 'O'],
@@ -81,6 +85,38 @@ class TestLogic(unittest.TestCase):
         self.assertEqual(logic.update_board(board2, 6, 'X'), board2_updated)
         self.assertEqual(logic.update_board(board1, 3, 'O'), board1)
         self.assertEqual(logic.update_board(board2, 3, 'X'), board2)
+
+    def test_check_draw(self):
+        board1 = [
+            ['X', '2', 'O'],
+            ['4', 'X', '6'],
+            ['7', 'O', 'X']]
+        board2 = [
+            ['X', '2', 'O'],
+            ['4', 'O', '6'],
+            ['O', 'O', 'X']]
+        board3 = [
+            ['X', 'O', 'X'],
+            ['4', 'X', '6'],
+            ['7', 'O', 'O']]
+        board4 = [
+            ['X', '2', 'O'],
+            ['4', 'O', 'X'],
+            ['7', 'O', 'O']]
+        board5 = [
+            ['X', 'X', 'O'],
+            ['O', 'O', 'X'],
+            ['X', 'O', 'O']]
+        board6 = [
+            ['O', 'X', 'O'],
+            ['O', 'X', 'X'],
+            ['X', 'O', 'O']]
+        self.assertEqual(logic.check_draw(board1), False)
+        self.assertEqual(logic.check_draw(board2), False)
+        self.assertEqual(logic.check_draw(board3), False)
+        self.assertEqual(logic.check_draw(board4), False)
+        self.assertEqual(logic.check_draw(board5), True)
+        self.assertEqual(logic.check_draw(board6), True)
 
 
 if __name__ == '__main__':
