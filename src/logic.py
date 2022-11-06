@@ -64,3 +64,17 @@ def check_index(board, index):
         return False
 
     return True
+
+
+def update_board(board, index, player):
+    """Given the board, the index, and the player, update and returns the board for the player."""
+
+    if not check_index(board, index):
+        return board
+
+    row = int((index - 1) / 3)
+    col = int((index - 1) % 3)
+
+    board[row][col] = player
+
+    return board
