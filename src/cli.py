@@ -13,5 +13,5 @@ if __name__ == '__main__':
         # TODO: Show the board to the user.
         # TODO: Input a move form the player.
         # TODO: Update the board.
-        # TODO: Update who's turn it is.
+        # TODO: Update whose turn it is.
         winner = 'X'  # FIXME
