@@ -46,6 +46,26 @@ class TestLogic(unittest.TestCase):
         self.assertEqual(logic.other_player('X'), 'O')
         self.assertEqual(logic.other_player('O'), 'X')
 
+    def test_get_board_from_index(self):
+        board = [
+            ['X', None, 'O'],
+            [None, 'X', None],
+            [None, 'O', 'X']
+        ]
+        self.assertEqual(logic.get_board_from_index(board, 1), 'X')
+        self.assertEqual(logic.get_board_from_index(board, 6), None)
+        self.assertEqual(logic.get_board_from_index(board, 8), 'O')
+
+    def test_check_index(self):
+        board = [
+            ['X', None, 'O'],
+            [None, 'X', None],
+            [None, 'O', 'X']
+        ]
+        self.assertEqual(logic.check_index(board, 1), False)
+        self.assertEqual(logic.check_index(board, 6), True)
+        self.assertEqual(logic.check_index(board, 8), False)
+
 
 if __name__ == '__main__':
     unittest.main()
