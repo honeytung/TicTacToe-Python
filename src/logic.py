@@ -34,7 +34,7 @@ def get_winner(board):
     if board[0][2] == board[1][1] == board[2][0]:
         return board[0][2]
 
-    return None 
+    return None
 
 
 def other_player(player):
