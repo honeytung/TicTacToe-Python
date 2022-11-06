@@ -78,3 +78,18 @@ def update_board(board, index, player):
     board[row][col] = player
 
     return board
+
+
+def check_draw(board):
+    """Given the board, check if the board is full and no winner can be determined.
+    Returns True or False"""
+
+    if get_winner(board) is not None:
+        return False
+
+    for row in board:
+        for col in row:
+            if col != 'O' and col != 'X':
+                return False
+
+    return True
