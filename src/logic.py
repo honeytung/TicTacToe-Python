@@ -104,6 +104,7 @@ class Human:
             board.update_board(index, self.player)
         return True
 
+
 # TODO: Delete everything below
 def make_empty_board():
     return [
