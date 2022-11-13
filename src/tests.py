@@ -161,40 +161,6 @@ class TestHuman(unittest.TestCase):
         self.assertEqual(player1, test_player1.player)
         self.assertEqual(player2, test_player2.player)
 
-    def test_get_move(self):
-        player1 = 'O'
-        player2 = 'X'
-
-        board1 = [['X', '2', 'O'],
-                  ['4', 'X', 'X'],
-                  ['7', 'O', 'O']]
-        board1_updated = [['X', 'O', 'O'],
-                          ['4', 'X', 'X'],
-                          ['7', 'O', 'O']]
-        board2 = [['X', '2', 'O'],
-                  ['4', 'X', '6'],
-                  ['7', 'O', 'O']]
-        board2_updated = [['X', '2', 'O'],
-                          ['4', 'X', 'X'],
-                          ['7', 'O', 'O']]
-
-        test_player1 = logic.Human(player1)
-        test_player2 = logic.Human(player2)
-        test_board1 = logic.Board()
-        test_board2 = logic.Board()
-
-        test_board1.board = board1
-        test_board2.board = board2
-
-        test_player1.get_move(test_board1, 3)
-        self.assertEqual(board1, test_board1.board)
-        test_player1.get_move(test_board1, 2)
-        self.assertEqual(board1_updated, test_board1.board)
-        test_player2.get_move(test_board2, 5)
-        self.assertEqual(board2, test_board2.board)
-        test_player2.get_move(test_board2, 6)
-        self.assertEqual(board2_updated, test_board2.board)
-
 
 if __name__ == '__main__':
     unittest.main()
