@@ -2,6 +2,51 @@
 # or output happens here. The logic in this file
 # should be unit-testable
 
+class Game:
+    def __init__(self, playerO, playerX):
+        """Initializes the Game with player O, player X, and an empty board."""
+
+        self.playerO = playerO
+        self.playerX = playerX
+        self.board = Board()
+        self.winner = None
+        self.current_player = playerO
+
+    def print_board(self):
+        """Prints the current board."""
+
+        for row in self.board.board:
+            print('  | ' + row[0] + ' | ' + row[1] + ' | ' + row[2] + ' |')
+
+    def print_winner(self):
+        """Prints the winner."""
+
+        self.print_board()
+        if self.winner is None:
+            print('It is a draw!')
+        else:
+            print('Player ' + self.winner + ' won!')
+
+    def other_player(self):
+        """Changes the current player to the other player."""
+
+        if self.current_player == self.playerO:
+            self.current_player = self.playerX
+        else:
+            self.current_player = self.playerO
+
+    def run(self):
+        """Run function to start the game."""
+
+        while self.winner is None and self.board.check_draw() is False:
+            self.print_board()
+            self.current_player.get_move(self.board)
+            self.winner = self.board.get_winner()
+            self.other_player()
+
+        self.print_winner()
+
+
 class Board:
 
     def __init__(self):
@@ -92,6 +137,7 @@ class Human:
 
     def __init__(self, player):
         """Initializes the player with O or X."""
+
         self.player = player
         self.next_move = 1
 
@@ -119,6 +165,7 @@ class Human:
 class Bot:
     def __init__(self, player):
         """Initializes the player with O or X."""
+
         self.player = player
         self.next_move = 1
 
