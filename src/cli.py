@@ -24,14 +24,38 @@ if __name__ == '__main__':
     game_mode = int(game_mode)
 
     if game_mode == 1:
-        player1 = Human('O')
-        player2 = Human('X')
+        print('Please Enter Player O Name: ', end='')
+        player1_name = input()
+
+        while len(player1_name) <= 0:
+            print('Error! Input Invalid! Please Try Again!')
+            print('Please Enter Player O Name: ', end='')
+            player1_name = input()
+
+        print('Please Enter Player X Name: ', end='')
+        player2_name = input()
+
+        while len(player2_name) <= 0:
+            print('Error! Input Invalid! Please Try Again!')
+            print('Please Enter Player X Name: ', end='')
+            player2_name = input()
+
+        player1 = Human('O', player1_name)
+        player2 = Human('X', player2_name)
     elif game_mode == 2:
-        player1 = Human('O')
-        player2 = Bot('X')
+        print('Please Enter Player O Name: ', end='')
+        player1_name = input()
+
+        while len(player1_name) <= 0:
+            print('Error! Input Invalid! Please Try Again!')
+            print('Please Enter Player O Name: ', end='')
+            player1_name = input()
+
+        player1 = Human('O', player1_name)
+        player2 = Bot('X', 'Bot 2')
     else:
-        player1 = Bot('O')
-        player2 = Bot('X')
+        player1 = Bot('O', 'Bot 1')
+        player2 = Bot('X', 'Bot 2')
 
     # Initialize game with appropriate game mode
     game = Game(player1, player2)
