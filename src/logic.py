@@ -51,14 +51,14 @@ class DataSave:
         player1_wins = len(player1_games.loc[(player1_games['Winner'] == player1.name)])
         player1_loses = len(
             player1_games.loc[(player1_games['Winner'] != player1.name) & (player1_games['Winner'] != 'Draw')])
-        player1_ratio = player1_wins / max(1, player1_loses)
+        player1_ratio = player1_wins / max(1, player1_loses + player1_wins)
 
         player2_games = self.games.loc[
             (self.games['Player 1'] == player2.name) | (self.games['Player 2'] == player2.name)]
         player2_wins = len(player2_games.loc[(player2_games['Winner'] == player2.name)])
         player2_loses = len(
             player2_games.loc[(player2_games['Winner'] != player2.name) & (player2_games['Winner'] != 'Draw')])
-        player2_ratio = player2_wins / max(1, player2_loses)
+        player2_ratio = player2_wins / max(1, player2_loses + player2_wins)
 
         print()
         print('=== Statistics ===')
