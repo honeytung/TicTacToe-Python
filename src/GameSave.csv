@@ -1,0 +1,15 @@
+,Unnamed: 0,Game ID,Player 1,Player 2,Player 1 Type,Player 2 Type,Winner
+0,1.0,Bot 1,Bot 2,Bot,Bot,Bot 1,
+1,2.0,Bot 1,Bot 2,Bot,Bot,Bot 1,
+2,3.0,Harry,Bot 2,Human,Bot,Harry,
+3,4.0,Jason,Harry,Human,Human,Harry,
+4,5.0,Jason,Bot 2,Human,Bot,Jason,
+5,6.0,Harry,Jack,Human,Human,Draw,
+6,7.0,Bot 1,Bot 2,Bot,Bot,Bot 1,
+7,8.0,Bot 1,Bot 2,Bot,Bot,Bot 1,
+8,9.0,Bot 1,Bot 2,Bot,Bot,Bot 1,
+9,10.0,Jack,Bot 2,Human,Bot,Bot 2,
+10,11.0,Bot 1,Bot 2,Bot,Bot,Bot 1,
+11,12.0,Bot 1,Bot 2,Bot,Bot,Bot 1,
+12,13.0,Harry,Jason,Human,Human,Harry,
+13,,14,Bot 1,Bot 2,Bot,Bot,Bot 1
