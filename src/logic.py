@@ -67,9 +67,6 @@ class DataSave:
         print('Player: ' + player2.name + '\tPlayer Type: ' + player2.type + '\tWins: ' + str(
             player2_wins) + '\tLoses: ' + str(player2_loses) + '\tW/L Ratio: ' + str(player2_ratio))
 
-        print()
-        print('=== Leaderboard ===')
-
 
 class Game:
     def __init__(self, playerO, playerX):
