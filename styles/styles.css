@@ -1,0 +1,104 @@
+/* ---  Body Style: Using Dark Mode --- */
+body {
+    background: #000000;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---        Navigation Bar        --- */
+.top-navigation {
+    overflow: hidden;
+    background-color: #1a2d39; 
+    margin-bottom: 50px;
+    width: 100%; 
+    color: rgb(194, 194, 194); 
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+}
+
+nav {
+    margin-right: 17%;
+}
+
+nav a {
+    float: right;
+    text-decoration: none; 
+    color: rgb(194, 194, 194);
+    font-size: 18px; 
+    padding: 20px 30px; 
+    display: inline-block; 
+    transition: all 0.5s ease 0s;
+}
+
+nav a:hover {
+    background-color: #002e5b; 
+    color: rgb(255, 255, 255); 
+}
+
+#logo {
+    font-size: 20px;  
+    font-weight: bold;
+    float: left;
+    padding: 15px 15px; 
+    margin-left: 16%;  
+}
+
+/* ---         Content Page         --- */
+.content {
+    margin: 50px 17%;
+}
+
+.content h3 {
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+    font-family: 'Arial', cursive;
+    margin-bottom: 20px
+}
+
+.content p{
+    text-align: justify;
+    margin-bottom: 50px;
+    line-height: 2;
+}
+
+.content p a {
+    color: aqua;
+}
+
+/* ---      Tic Tac Toe Board       --- */
+.board {
+    aspect-ratio: 1 / 1;
+    width: 70%;
+}
+
+.tile {
+    padding: 18px;
+    border-collapse: collapse;
+    border: white 1px solid;
+    font-size: 6vw;
+    text-align: center;
+    width: 33%;
+    height: 33%;
+}
+
+.tile:hover {
+    background-color: royalblue;
+}
+
+/* ---         Leaderboard          --- */
+.leaderboard {
+    width: 100%;
+}
+
+.leader-nav {
+    padding: 10px;
+    border-collapse: collapse;
+    background-color: lightblue;
+    color: black;
+}
+
+.leader-score {
+    padding: 10px;
+}
