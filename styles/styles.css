@@ -1,3 +1,8 @@
+/* ---       Set Default Font       --- */
+* {
+    font-family: sans-serif;
+}
+
 /* ---  Body Style: Using Dark Mode --- */
 body {
     background: #000000;
