@@ -69,7 +69,7 @@ class DataSave:
 
 
 class Game:
-    def __init__(self, playerO, playerX):
+    def __init__(self, playerO, playerX, cli):
         """Initializes the Game with player O, player X, and an empty board."""
 
         self.playerO = playerO
@@ -241,6 +241,12 @@ class Human:
 
         self.next_move = self.get_next_move(board)
         board.update_board(self.next_move, self.player)
+
+    def get_move_flask(self, board, move):
+        """Gets the next move for flask web interface and updates the board."""
+        while str.isnumeric(move) is False or board.check_index(int(move)) is False:
+            raise Exception('Error! Input Invalid!')
+        board.update_board(move, self.player)
 
 
 class Bot:
