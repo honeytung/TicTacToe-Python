@@ -33,8 +33,7 @@ nav a {
     color: rgb(194, 194, 194);
     font-size: 18px; 
     padding: 20px 30px; 
-    display: inline-block; 
-    transition: all 0.5s ease 0s;
+    display: inline-block;
 }
 
 nav a:hover {
@@ -43,7 +42,7 @@ nav a:hover {
 }
 
 #logo {
-    font-size: 20px;  
+    font-size: 24px;
     font-weight: bold;
     float: left;
     padding: 15px 15px; 
@@ -74,8 +73,8 @@ nav a:hover {
 
 /* ---      Tic Tac Toe Board       --- */
 .board {
-    aspect-ratio: 1 / 1;
-    width: 70%;
+    box-sizing: border-box;
+    width: 50%;
 }
 
 .tile {

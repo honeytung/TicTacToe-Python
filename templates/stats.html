@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="./styles/styles.css">
+<link rel="stylesheet" href="{{url_for('static', filename='styles/styles.css')}}">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 <html>
     <head>
         <title>Leaderboard - Tic Tac Toe Game</title>
-        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='images/favicon.ico')}}">
     </head>
     <body>
         <div class="top-navigation">
             <div id="logo">Tic Tac Toe</div>
             <nav>
-                <a href="./stats.html">Leaderboard</a>
-                <a href='./index.html'>Home</a>
+                <a href="{{url_for('stats')}}">Leaderboard</a>
+                <a href="{{url_for('index')}}">Home</a>
             </nav>
         </div>
         <div class="content">
@@ -52,10 +52,10 @@
             </table>
 
             <h3>Number of Wins and Draws</h3>
-            <img src="./images/img_wins_draws.png" width="60%">
+            <img src="{{url_for('static', filename='images/img_wins_draws.png')}}" width="60%">
 
             <h3>Win Rate for Human vs. Bots</h3>
-            <img src="./images/img_human_vs_bots.png" width="60%">
+            <img src="{{url_for('static', filename='images/img_human_vs_bots.png')}}" width="60%">
 
         </div>
     </body>
